@@ -1,15 +1,16 @@
+// 自己写的
 function arrayDiff(a, b) {
   let c = [];
   let d = 0;
   if(b.length > 0 ){
-    for (let i = 0; i < a.length; i++){
-      d = 0;
-      for(let j = 0; j < b.length; j++){
+    for (let i = 0; i < a.length; i++){ // 先遍历a中的元素
+      d = 0;//每一次拿a的元素出来都要对d进行重新赋值为0
+      for(let j = 0; j < b.length; j++){ // 遍历b中元素，与a[i]比较，如果相同则d自增1,
         if (a[i] == b[j]){
           d += 1;
         } 
       }
-      if (d == 0){
+      if (d == 0){ // 如果b中的元素没有与a[i]相同的，则d仍为0，向c中push  a[i]
         c.push(a[i])
       }
     }
