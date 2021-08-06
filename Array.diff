@@ -1,0 +1,20 @@
+function arrayDiff(a, b) {
+  let c = [];
+  let d = 0;
+  if(b.length > 0 ){
+    for (let i = 0; i < a.length; i++){
+      d = 0;
+      for(let j = 0; j < b.length; j++){
+        if (a[i] == b[j]){
+          d += 1;
+        } 
+      }
+      if (d == 0){
+        c.push(a[i])
+      }
+    }
+  } else {
+    c = a;
+  }
+  return c
+}
